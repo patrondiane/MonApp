@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Diane Tchuisseu" />
+    <meta
+      name="description"
+      content="AsuzaBoutiques - Collections pour Femme, Homme, Ados, Enfants"
+    />
+    <title>AsuzaBoutiques</title>
+    <link rel="icon" href="html5.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+
+  <body>
+    <!-- En-tête -->
+    <header>
+      <nav class="TopNav">
+        <ul class="BarreNavig">
+          <li class="menu-deroulant">
+            <a href="#">FEMME</a>
+            <div class="mega-menu">
+              <div class="colonne">
+                <h4>Vêtements</h4>
+                <ul>
+                  <li><a href="#">Robes</a></li>
+                  <li><a href="#">Tops</a></li>
+                  <li><a href="#">Pantalons</a></li>
+                  <li><a href="#">Accessoires</a></li>
+                </ul>
+              </div>
+              <div class="colonne">
+                <h4>Accessoires</h4>
+                <ul>
+                  <li><a href="#">Sacs</a></li>
+                  <li><a href="#">Bijoux</a></li>
+                  <li><a href="#">Ceintures</a></li>
+                </ul>
+              </div>
+              <div class="colonne">
+                <h4>Chaussures</h4>
+                <ul>
+                  <li><a href="#">Talons</a></li>
+                  <li><a href="#">Baskets</a></li>
+                  <li><a href="#">Bottes</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="menu-deroulant">
+            <a href="#">HOMME</a>
+            <div class="mega-menu">
+                <div class="colonne">
+                    <h4>Vêtements</h4>
+                    <ul>
+                        <li><a href="#">T-shirts</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Vestes</a></li>
+                    </ul>
+                </div>
+                <div class="colonne">
+                <h4>Vêtements</h4>
+                <ul>
+                  <li><a href="#">Robes</a></li>
+                  <li><a href="#">Tops</a></li>
+                  <li><a href="#">Pantalons</a></li>
+                  <li><a href="#">Accessoires</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="menu-deroulant">
+            <a href="#">ADOS</a>
+            <div class="mega-menu">
+            <div class="colonne">
+            <h4>Vêtements</h4>
+            <ul>
+              <li><a href="#">Filles</a></li>
+              <li><a href="#">Garcons</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-deroulant">
+            <a href="#">ENFANTS</a>
+            <div class="mega-menu">
+            <div class="colonne">
+            <h4>Vêtements</h4>
+            <ul>
+              <li><a href="#">Bébés</a></li>
+              <li><a href="#">Enfants Fille</a></li>
+              <li><a href="#">Enfants Garcon</a></li>
+            </ul>
+          </li>
+        </ul>
+        <img class="Logo" src="images/AB Logo.jpg" alt="Logo AsuzaBoutiques" />
+        <ul class="BarreRecherche">
+          <li><a href="#">RECHERCHER</a></li>
+          <li><a href="#">SE CONNECTER</a></li>
+          <li><a href="#">FAVORIS</a></li>
+          <li><a href="#">PANIER</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Carrousel -->
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide active">
+          <img
+            src="images/jeffery-erhunse-vp9mRauo68c-unsplash.jpg"
+            alt="Collection Femme"
+          />
+          <div class="slide-content">
+            <h2>Collection FEMME</h2>
+            <a href="#" class="btn">VOIR LA COLLECTION</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="images/grace-hilty-vlpjCuqLobE-unsplash.jpg"
+            alt="Collection Homme"
+          />
+          <div class="slide-content">
+            <h2>Collection HOMME</h2>
+            <a href="#" class="btn">VOIR LA COLLECTION</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="images/brian-asare-nnR_q6nNaLM-unsplash.jpg"
+            alt="Collection Ados"
+          />
+          <div class="slide-content">
+            <h2>Collection ADOS</h2>
+            <a href="#" class="btn">VOIR LA COLLECTION</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="images/nina-strehl-7O1YZkFsNf0-unsplash.jpg"
+            alt="Collection Enfants"
+          />
+          <div class="slide-content">
+            <h2>Collection ENFANTS</h2>
+            <a href="#" class="btn">VOIR LA COLLECTION</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <!-- Section Newsletter -->
+    <section class="Newsletter">
+      <h2 class="BasImg">
+        Recevez promotions exclusives, ventes privées et nouveautés
+      </h2>
+      <form>
+        <input type="email" id="email" placeholder="Email" />
+        <input type="submit" value="M'inscrire" />
+      </form>
+      <div class="PolitiqueNewsletter">
+        <p id="newsletter-policy">
+          En vous inscrivant, vous confirmez avoir lu la
+          <a href="#">Politique de confidentialité</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Produits -->
+    <section class="produits">
+      <h2>Nos Produits</h2>
+      <div class="grille-produits">
+        <div class="carte-produit">
+          <img
+            src="images/vladimir-yelizarov-tGRks1CV_HA-unsplash.jpg"
+            alt="Robe beige"
+          />
+          <div class="details-produit">
+            <h3>Robe beige fluide</h3>
+            <p>49.99 €</p>
+          </div>
+        </div>
+        <div class="carte-produit">
+          <img
+            src="images/fernando-andrade-potCPE_Cw8A-unsplash.jpg"
+            alt="Parfum Vanille"
+          />
+          <div class="details-produit">
+            <h3>Parfum Vanille</h3>
+            <p>29.99 €</p>
+          </div>
+        </div>
+        <div class="carte-produit">
+          <img
+            src="images/nilufar-nattaq-AthqJqqG1Yk-unsplash.jpg"
+            alt="Top en lin"
+          />
+          <div class="details-produit">
+            <h3>Top en lin</h3>
+            <p>39.99 €</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+      <p>© 2025 AsuzaBoutiques</p>
+      <nav>
+        <ul>
+          <li><a href="#">Les coordonnées d'AsuzaBoutiques</a></li>
+          <li><a href="#">Confidentialité et cookies</a></li>
+          <li><a href="#">Conditions générales</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

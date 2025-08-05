@@ -1,0 +1,257 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&Display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 20px;
+}
+
+.TopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.BarreNavig, .BarreRecherche{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.BarreNavig a, .BarreRecherche a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+.Logo {
+    width: 120px;
+}
+
+.FEMME, .HOMME, .ADOS, .ENFANTS {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.Newsletter {
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.Newsletter input[type="email"] {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.Newsletter input[type="submit"] {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.produits {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.produits h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.grille-produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.carte-produit {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.carte-produit img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.carte-produit img:hover {
+    transform: scale(1.05);
+}
+
+.details-produit {
+    font-size: 16px;
+    text-align: center;
+}
+
+.details-produit h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.details-produit p {
+    font-size: 16px;
+    color: #777;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: none;
+}
+
+.slide.active{
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.6);
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.slide-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+.menu-deroulant {
+    position: relative;
+}
+
+.sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 50vw;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.sous-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+.sous-menu li:last-child {
+    border-bottom: none;
+}
+
+.sous-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;;
+}
+
+.menu-deroulant:hover .sous-menu {
+    display: block;
+}
+
+.sous-menu a:hover {
+    background-color: #f0f0f0;
+}
