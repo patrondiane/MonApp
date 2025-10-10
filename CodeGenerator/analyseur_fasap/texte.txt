@@ -1,0 +1,5 @@
+Bonjour à tous ! Voici un petit texte de démonstration.
+Il contient des phrases, des mots, et même des répétitions.
+
+Bonjour à tous !
+Ce texte est un test. Il sert à analyser les mots les plus fréquents.
