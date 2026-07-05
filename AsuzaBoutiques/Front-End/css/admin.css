@@ -1,0 +1,115 @@
+/* Styles du tableau de bord administrateur */
+body { 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    padding: 40px; 
+    background: #ffffff; 
+    color: #000;
+}
+
+.form-container, .list-container { 
+    background: #fff; 
+    margin-bottom: 40px; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 20px;
+}
+
+h2 { font-weight: 300; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th { text-transform: uppercase; font-size: 12px; border-bottom: 1px solid #000; padding: 15px; }
+td { padding: 20px 15px; border-bottom: 1px solid #f4f4f4; }
+
+button { 
+    background: #000; 
+    color: #fff; 
+    border: none; 
+    padding: 8px 16px; 
+    cursor: pointer; 
+    font-size: 12px; 
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+button:hover { background: #333; }
+
+.btn-delete { background: transparent; color: #cc0000; border: 1px solid #cc0000; }
+.btn-delete:hover { background: #cc0000; color: #fff; }
+
+/* --- Nouveaux styles pour les KPI et Graphiques --- */
+
+.kpi-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.kpi-card {
+    background: #fff;
+    flex: 1;
+    padding: 30px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.kpi-card h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.kpi-value {
+    font-size: 32px;
+    font-family: 'Playfair Display', serif; /* Rappel de la typo vitrine */
+    margin-bottom: 10px;
+}
+
+.kpi-trend {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.kpi-trend.positive { color: #2e7d32; }
+.kpi-trend.negative { color: #c62828; }
+
+.charts-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.chart-card {
+    background: #fff;
+    flex: 1;
+    padding: 30px;
+    border: 1px solid #eee;
+}
+
+/* Style des formulaires amélioré */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #000;
+}
+
+form button {
+    grid-column: span 2;
+    padding: 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}

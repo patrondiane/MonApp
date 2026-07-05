@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsuzaBoutiques</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-black">
+
+    <!-- En-tête -->
+    <header class="flex justify-between items-center p-6 border-b border-gray-200 sticky top-0 bg-white z-30">
+        <nav class="space-x-6 text-xs font-bold tracking-widest uppercase">
+            <a href="#" class="hover:border-b border-black pb-1">Femme</a>
+            <a href="#" class="hover:border-b border-black pb-1">Homme</a>
+        </nav>
+        <h1 class="text-4xl tracking-tighter">A S U Z A  B O U T I Q U E S</h1>
+        <div class="flex space-x-6 text-xs font-bold tracking-widest uppercase">
+            <a href="admin.html" class="text-gray-500 hover:text-black transition">Accès Admin</a>
+            <button id="open-cart-btn" class="hover:border-b border-black pb-1">Panier (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <!-- Carrousel pleine largeur -->
+    <section class="carousel-container w-full relative h-[80vh] overflow-hidden">
+        <!-- Slide 1 -->
+        <div class="slide absolute inset-0 transition-opacity duration-1000" style="display: block;">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop" alt="Collection Automne" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col items-center justify-center">
+                <h2 class="text-white text-5xl md:text-7xl font-serif tracking-widest uppercase mb-4">Automne</h2>
+                <a href="#" class="text-white text-xs font-bold tracking-widest uppercase border-b border-white pb-1 hover:text-gray-300 transition">Découvrir</a>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide absolute inset-0 transition-opacity duration-1000" style="display: none;">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2000&auto=format&fit=crop" alt="Édition Limitée" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-20 flex flex-col items-center justify-center">
+                <h2 class="text-white text-5xl md:text-7xl font-serif tracking-widest uppercase mb-4">Édition Limitée</h2>
+                <a href="#" class="text-white text-xs font-bold tracking-widest uppercase border-b border-white pb-1 hover:text-gray-300 transition">Acheter</a>
+            </div>
+        </div>
+
+        <!-- Boutons de navigation -->
+        <button class="nav-btn prev uppercase text-xs font-bold tracking-widest absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white text-black px-6 py-3 hover:bg-black hover:text-white transition duration-300">Prec</button>
+        <button class="nav-btn next uppercase text-xs font-bold tracking-widest absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white text-black px-6 py-3 hover:bg-black hover:text-white transition duration-300">Suiv</button>
+    </section>
+
+    <!-- Grille de produits -->
+    <main class="p-8 max-w-7xl mx-auto">
+        <h2 class="text-xl mb-8 tracking-widest uppercase text-center font-serif">Nouveautés</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+           <div class="group text-center">
+                <div class="h-[32rem] w-full mb-4 overflow-hidden relative bg-gray-100 cursor-pointer" 
+                     onclick="openProductModal('Robe drapée en lin', 49.95, 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop', 'Robe longue au tombé impeccable. Sa coupe structurée et modeste offre une silhouette minimaliste et élégante, parfaite pour une garde-robe aux tons neutres.')">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" alt="Robe drapée" class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105">
+                </div>
+                <h3 class="text-xs font-bold uppercase tracking-wider">Robe drapée en lin</h3>
+                <p class="text-sm mt-2 text-gray-600">49,95 EUR</p>
+            </div>
+
+            <div class="group text-center">
+                <div class="h-[32rem] w-full mb-4 overflow-hidden relative bg-gray-100 cursor-pointer"
+                     onclick="openProductModal('Veste de tailleur structurée', 79.95, 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=800&auto=format&fit=crop', 'Veste aux lignes nettes et épurées. Une pièce maîtresse dans une palette neutre, idéale pour structurer une tenue avec une élégance discrète.')">
+                    <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=800&auto=format&fit=crop" alt="Veste structurée" class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105">
+                </div>
+                <h3 class="text-xs font-bold uppercase tracking-wider">Veste de tailleur structurée</h3>
+                <p class="text-sm mt-2 text-gray-600">79,95 EUR</p>
+            </div>
+
+            <div class="group text-center">
+                <div class="h-[32rem] w-full mb-4 overflow-hidden relative bg-gray-100 cursor-pointer"
+                     onclick="openProductModal('Pantalon taille haute', 39.95, 'https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop', 'Pantalon palazzo taille haute. Une coupe ample et couvrante qui allie confort et architecture minimaliste pour un style haut de gamme.')">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop" alt="Pantalon" class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105">
+                </div>
+                <h3 class="text-xs font-bold uppercase tracking-wider">Pantalon taille haute</h3>
+                <p class="text-sm mt-2 text-gray-600">39,95 EUR</p>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="product-modal" class="fixed inset-0 bg-white z-50 hidden overflow-y-auto opacity-0 transition-opacity duration-500">
+        <button id="close-modal-btn" class="absolute top-6 right-6 md:top-10 md:right-10 text-xs font-bold tracking-widest uppercase text-gray-500 hover:text-black z-50 transition">Fermer ✕</button>
+        
+        <div class="flex flex-col md:flex-row min-h-screen">
+            <div class="md:w-1/2 bg-gray-50 flex items-center justify-center p-0 md:p-8">
+                <img id="modal-image" src="" alt="Détail Produit" class="w-full h-[60vh] md:h-full object-cover">
+            </div>
+            
+            <div class="md:w-1/2 flex flex-col justify-center p-8 md:p-16 lg:p-24 bg-white">
+                <h2 id="modal-title" class="text-3xl font-serif tracking-widest uppercase mb-4">Nom du produit</h2>
+                <p id="modal-price" class="text-lg text-gray-600 mb-8 font-light">0,00 EUR</p>
+                
+                <div class="mb-10 text-sm text-gray-600 leading-relaxed space-y-4">
+                    <p id="modal-desc">Description minimaliste.</p>
+                    <p class="font-bold text-black uppercase tracking-wider text-xs mt-6">Composition <br><span class="font-normal text-gray-500 normal-case tracking-normal">95% Coton structuré / 5% Élasthanne</span></p>
+                </div>
+
+                <div class="mb-10">
+                    <span class="block text-xs font-bold tracking-widest uppercase mb-4 text-black">Taille</span>
+                    <div class="flex space-x-3">
+                        <button class="size-btn border border-gray-300 w-12 h-12 flex items-center justify-center text-xs hover:border-black transition">XS</button>
+                        <button class="size-btn border border-gray-300 w-12 h-12 flex items-center justify-center text-xs hover:border-black transition">S</button>
+                        <button class="size-btn border border-gray-300 w-12 h-12 flex items-center justify-center text-xs hover:border-black transition">M</button>
+                        <button class="size-btn border border-gray-300 w-12 h-12 flex items-center justify-center text-xs hover:border-black transition">L</button>
+                    </div>
+                </div>
+
+                <button id="modal-add-btn" class="w-full bg-black text-white font-bold py-4 uppercase tracking-widest hover:bg-gray-800 transition shadow-lg">
+                    Ajouter au panier
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay sombre -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black bg-opacity-30 z-40 hidden transition-opacity duration-300 opacity-0"></div>
+
+    <!-- Tiroir du panier -->
+    <div id="cart-drawer" class="fixed top-0 right-0 w-full md:w-[400px] h-full bg-white z-50 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col shadow-2xl">
+        <div class="flex justify-between items-center p-6 border-b border-gray-100">
+            <h2 class="text-lg font-serif tracking-widest uppercase">Votre Panier</h2>
+            <button id="close-cart-btn" class="text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-black">Fermer</button>
+        </div>
+
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6">
+            <p class="text-sm text-gray-500 tracking-widest uppercase text-center mt-10" id="empty-cart-msg">Votre panier est vide.</p>
+        </div>
+
+        <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <div class="flex justify-between items-center mb-6">
+                <span class="text-sm font-bold tracking-widest uppercase">Total</span>
+                <span class="text-lg" id="cart-total">0,00 EUR</span>
+            </div>
+            <button class="w-full bg-black text-white font-bold py-4 uppercase tracking-widest hover:bg-gray-800 transition">
+                Commander
+            </button>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>

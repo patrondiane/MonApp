@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - AsuzaBoutique</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Tableau de bord Admin</h1>
+    </header>
+
+    <section class="kpi-container">
+        <div class="kpi-card">
+            <h3>CA du jour</h3>
+            <p class="kpi-value">1 245,00 €</p>
+            <span class="kpi-trend positive">+12% vs hier</span>
+        </div>
+        <div class="kpi-card">
+            <h3>Visites</h3>
+            <p class="kpi-value">842</p>
+            <span class="kpi-trend positive">+5% vs hier</span>
+        </div>
+        <div class="kpi-card">
+            <h3>Taux de conversion</h3>
+            <p class="kpi-value">2.4%</p>
+            <span class="kpi-trend negative">-0.2% vs hier</span>
+        </div>
+    </section>
+
+    <section class="charts-container">
+        <div class="chart-card">
+            <h2>Évolution des Ventes (7 jours)</h2>
+            <canvas id="salesChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <h2>Répartition par Catégorie</h2>
+            <canvas id="categoryChart"></canvas>
+        </div>
+    </section>
+
+    <section class="form-container">
+        <h2>Ajouter un nouvel article</h2>
+        <form id="productForm">
+            <input type="text" id="name" placeholder="Nom de l'article" required>
+            <input type="number" id="price" placeholder="Prix" step="0.01" required>
+            <select id="category" title="Catégorie de l'article" required>
+                <option value="" disabled selected>Choisir une catégorie</option>
+                <option value="Femme">Femme</option>
+                <option value="Homme">Homme</option>
+                <option value="Accessoires">Accessoires</option>
+            </select>
+            <input type="text" id="image" placeholder="URL de l'image (optionnel)">
+            <button type="submit">Ajouter l'article</button>
+        </form>
+    </section>
+
+    <section class="list-container">
+        <h2>Gestion des stocks</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Catégorie</th>
+                    <th>Prix</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                </tbody>
+        </table>
+    </section>
+</body>
+</html>
